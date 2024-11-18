@@ -5,7 +5,6 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using log4net.Config;
 using log4net;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -22,6 +21,7 @@ builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(Program).Assembly); // register ad
 });
 builder.Services.AddScoped<IGym_User_MasterRepository, Gym_User_MasterRepository>();
+builder.Services.AddScoped<IGymMemberRepository,GymMemberRepository>();
 // Configure log4net
 log4net.GlobalContext.Properties["LogDirectory"] = Environment.CurrentDirectory;
 builder.Services.AddSingleton<ILog>(_ => LogManager.GetLogger(typeof(Program)));
