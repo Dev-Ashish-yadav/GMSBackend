@@ -23,9 +23,9 @@ builder.Services.AddMediatR(cfg =>
 });
 builder.Services.AddScoped<IGym_User_MasterRepository, Gym_User_MasterRepository>();
 // Configure log4net
-//log4net.GlobalContext.Properties["LogDirectory"] = Environment.CurrentDirectory;
-//builder.Services.AddSingleton<ILog>(_ => LogManager.GetLogger(typeof(Program)));
-//XmlConfigurator.Configure(new FileInfo(Path.Combine(Environment.CurrentDirectory, "Middleware/Log4Net.config")));
+log4net.GlobalContext.Properties["LogDirectory"] = Environment.CurrentDirectory;
+builder.Services.AddSingleton<ILog>(_ => LogManager.GetLogger(typeof(Program)));
+XmlConfigurator.Configure(new FileInfo(Path.Combine(Environment.CurrentDirectory, "/Middleware/Log4Net.config")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
