@@ -9,6 +9,7 @@ namespace Domain.Entities
     public class Gym_Users_master
     {
         public int GU_ID { get; set; }
+
         public string GU_GM_ID { get; set; }
         public string GU_MOBILE { get; set; }
         public string GU_FIRST_NAME { get; set; }
