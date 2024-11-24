@@ -24,7 +24,7 @@ namespace GymBackendServices.Handlers
                     var result =await _repository.AddGymMember(request);
                     if(result)
                     {
-                        response.Data = "Successfull add record.";
+                        response.Data = "Successfully add record.";
                     }
                     else
                     {
