@@ -25,7 +25,7 @@ namespace Domain.Entities
         public string ProfilePhoto { get; set; }
         public string MedicalIssue {  get; set; }
         public string MedicalIssueDescription { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
         public string GymPlanID { get; set; }
         public Decimal Amount {  get; set; }
         public decimal Balance { get; set; }
